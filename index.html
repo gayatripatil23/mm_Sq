@@ -1,0 +1,40 @@
+<html
+<head>
+<title>Square Finder by Ankita</title>
+<style>
+*{front-size:60px; font-family:camria;}
+body{background-color:azure;}
+</style>
+</head>
+<body>
+<center>
+<h1>Square Finder</h1>
+<form onsubmit="find()">
+<input type="number" step="any" id="num" placeholder="Enter Number"/>
+<br/><br/>
+<input type="submit"value="Find Square"/>
+</form>
+<h2 id="msg"/>
+<script>
+function find()
+{
+event.preventDefault();
+let num=document.getElementById("num");
+let msg=document.getElementById("msg");
+
+if(num.value==="")
+{
+alert("Please Enter NUmber");
+msg.innerHTML="";
+num.focus();
+return;
+}
+let n=parseFloat(num.value);
+let s=n**2;
+let a="square="+s.toFixed(2);
+msg.innerHTML=a;
+}
+</script>
+</center>
+</body>
+</html>
